@@ -8,28 +8,22 @@
 #include <stdarg.h>
 
 /**
- * struct inputs - the inputs argumants to print
- *
- * @input: The operator
- * @f: The function associated
+ * struct types - specifier structure for printf
+ * @p: pointer to characteres specifiers
+ * @func : function pointer to print fucntions
  */
-typedef struct inputs
+typedef struct types
 {
-	char *input;
-	int (*f)(va_list);
-} inputs_t;
+	char input;
+	int (*func)(va_list);
+} print_f;
 
-/*putchar function*/
 int _putchar(char c);
-
-/*printf functions prototypes*/
-void print_char(va_list argument);
-void print_string(va_list argument);
-void print_percent(va_list argument);
-
-/* the function to select */
-void(*get_right_function(char *c))(va_list argument);
-
 int _printf(const char *format, ...);
+int _ikteb_3adad(va_list argument);
+int _ikteb_jomla(va_list argument);
+int _ikteb_7arf(va_list argument);
+int (*i5dem_yr7am_weldik(const char c))(va_list);
+
 
 #endif /*__PRINTF_PROJECT__*/

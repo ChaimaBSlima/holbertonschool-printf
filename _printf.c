@@ -1,39 +1,78 @@
 #include "main.h"
 /**
- * print_all - a function that prints anything.
- * @format: format of arguments
- * @... : the arguments to print
+ * _printf - printf function.
+ * @format: variable
  *
- * Return: void
+ * Return: nbytes printed.
  */
 int _printf(const char *format, ...)
 {
-	int i = 0;
-	int THE_PRINT = 0;
-	char *ch, *starting;
+	va_list list;
+	unsigned int i = 0, j = 0;
 
-	va_list argument;
-	va_start(argument, format);
-	if (format == NULL || (format[0] == '%' && !format[1]))
-	{
+	if (!format)
 		return (-1);
-	}
-	if (format[1] == ' ' && format[0] == '%' && !format[2])
+
+	va_start(list, format);
+	for (i = 0; format[i] != '\0'; i++)
 	{
-		return (-1);
-	}
-	for (ch = format; *ch; ch++)
-	{
-		if (*ch = "%")
+		if (format[i] == '%')
 		{
-			THE_PRINT += _putchar(*ch);
-			continue;
-		}else{
-			get_right_function( ch++);
-		}
-		ch++;
+			if (format[i + 1] == '\0')
+				return (-1);
 
+			else if (format[i + 1] == '%')
+			{
+				_putchar('%');
+				j++;
+				i++;
+			}
+			else if (i5dem_yr7am_weldik(format[i + 1]) != NULL)
+			{
+				j += (i5dem_yr7am_weldik(format[i + 1]))(list);
+				i++;
+			}
+			else
+			{
+				_putchar(format[i]);
+				j++;
+			}
+		}
+		else
+		{
+			_putchar(format[i]);
+			j++;
+		}
+	}
+	va_end(list);
+	return (j);
+}
+
+/**
+ * i5dem_yr7am_weldik - choce the right function
+ * @c: character.
+ *
+ * Return: 0.
+ */
+int (*i5dem_yr7am_weldik(const char c))(va_list)
+{
+	print_f printf[] = {
+		{'c', _ikteb_7arf},
+		{'s', _ikteb_jomla},
+		{'d', _ikteb_3adad},
+		{'i', _ikteb_3adad},
+		{'\0', NULL}
+	};
+
+	int k;
+
+	for (k = 0; printf[k].input != '\0'; k++)
+	{
+		if (printf[k].input == c)
+		{
+			return (printf[k].func);
+		}
 	}
 
-	va_end(argument);
+	return (0);
 }
