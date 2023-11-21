@@ -31,6 +31,6 @@ void print_percent(va_list argument);
 int (*get_right_function(char *c))(va_list);
 
 
-int _printf(const char *format, ...);
+void _printf(const char *format, ...);
 
 #endif /*__PRINTF_PROJECT__*/

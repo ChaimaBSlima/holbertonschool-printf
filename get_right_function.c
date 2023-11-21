@@ -6,7 +6,7 @@
  *
  * Return: specific function work
  */
-int (*get_right_function(char *c))(va_list)
+void (*get_right_function(char *c))(va_list)
 {
 	inputs_t inputs[] = {
 		{'c', print_char},
@@ -19,9 +19,8 @@ int (*get_right_function(char *c))(va_list)
 	{
 		if (c && c[0] == inputs[i].input[0] && !c[1])
 		{
-			return (inputs[i].f);
+			inputs[i].f;
 		}
 		i++;
 	}
-	return (NULL);
 }
