@@ -14,14 +14,14 @@ int _ikteb_7arf(va_list argument)
  *_ikteb_jomla - Print string
  * @argument: the string
  *
- * Return: n (bytes) 
+ * Return: n (bytes)
  */
 int _ikteb_jomla(va_list argument)
 {
 	char *jomla;
 	int n;
 
-	jomla = va_arg(argument, char*);
+	jomla = va_arg(argument, char *);
 	if (jomla == NULL)
 	{
 		write(1, "(null)", 6);
@@ -46,7 +46,7 @@ int _ikteb_3adad(va_list argument)
 {
 
 	long int _3adad;
-	int n , i9leb, base;
+	int n, i9leb, base;
 
 	n = 0;
 	_3adad = va_arg(argument, int);
@@ -57,7 +57,7 @@ int _ikteb_3adad(va_list argument)
 		_putchar(45);
 		n++;
 	}
-	if (_3adad >= 0 && _3adad<= 9)
+	if (_3adad >= 0 && _3adad <= 9)
 	{
 		_putchar(_3adad + 48);
 		n++;

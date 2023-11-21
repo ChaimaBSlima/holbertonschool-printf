@@ -9,7 +9,7 @@
 
 /**
  * struct types - specifier structure for printf
- * @p: pointer to characteres specifiers
+ * @input: pointer to characteres specifiers
  * @func : function pointer to print fucntions
  */
 typedef struct types
