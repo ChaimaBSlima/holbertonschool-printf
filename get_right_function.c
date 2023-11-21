@@ -9,9 +9,9 @@
 void (*get_right_function(char *c))(va_list)
 {
 	inputs_t inputs[] = {
-		{'c', print_char},
-		{'s', print_string},
-		{'%', print_percent},
+		{"c", print_char},
+		{"s", print_string},
+		{"%", print_percent},
 		{NULL, NULL}};
 	int i = 0;
 
