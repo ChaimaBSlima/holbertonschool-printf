@@ -6,21 +6,22 @@
  *
  * Return: specific function work
  */
-void (*get_right_function(char *c))(va_list)
+void (*get_right_function(char *c))(va_list argument)
 {
-	inputs_t inputs[] = {
-		{"c", print_char},
-		{"s", print_string},
-		{"%", print_percent},
-		{NULL, NULL}};
-	int i = 0;
+    inputs_t inputs[] = {
+        {"c", print_char},
+        {"s", print_string},
+        {"%", print_percent},
+        {NULL, NULL}};
+    int i = 0;
 
-	while (i < 5)
-	{
-		if (c && c[0] == inputs[i].input[0] && !c[1])
-		{
-			inputs[i].f;
-		}
-		i++;
-	}
+    while (inputs[i].input)
+    {
+        if (*c == inputs[i].input[0])
+        {
+            return (inputs[i].f);
+        }
+        i++;
+    }
+    return (NULL);
 }

@@ -28,7 +28,7 @@ void print_string(va_list argument);
 void print_percent(va_list argument);
 
 /* the function to select */
-void(*get_right_function(char *c))(va_list);
+void(*get_right_function(char *c))(va_list argument);
 
 int _printf(const char *format, ...);
 

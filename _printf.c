@@ -9,24 +9,31 @@
 int _printf(const char *format, ...)
 {
 	int i = 0;
-	int j;
-	char *ch;
+	int THE_PRINT = 0;
+	char *ch, *starting;
 
 	va_list argument;
 	va_start(argument, format);
-	ch = va_arg(argument ,char* );
-
-	while (format && format[i])
+	if (format == NULL || (format[0] == '%' && !format[1]))
 	{
-		while (*(ch + i) != '\0')
+		return (-1);
+	}
+	if (format[1] == ' ' && format[0] == '%' && !format[2])
 	{
-		if ( ch[i] == "%"){
-             get_right_function(ch[i+1]);
+		return (-1);
+	}
+	for (ch = format; *ch; ch++)
+	{
+		if (*ch = "%")
+		{
+			THE_PRINT += _putchar(*ch);
+			continue;
+		}else{
+			get_right_function( ch++);
 		}
-		_putchar(ch[i]);
-		i++;
+		ch++;
+
 	}
-	}
-	printf("\n");
+
 	va_end(argument);
 }
