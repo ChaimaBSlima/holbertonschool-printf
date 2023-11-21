@@ -1,15 +1,5 @@
 #include "main.h"
 /**
- * _putchar - Entry function. Write characteres
- * @c: variable va_list
- *
- * Return: Writed character
- */
-int _putchar(char c)
-{
-	return (write(1, &c, 1));
-}
-/**
  * _ikteb_7arf -  Print character
  * @argument: the character
  *
