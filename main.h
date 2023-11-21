@@ -28,9 +28,8 @@ void print_string(va_list argument);
 void print_percent(va_list argument);
 
 /* the function to select */
-int (*get_right_function(char *c))(va_list);
+void(*get_right_function(char *c))(va_list);
 
-
-void _printf(const char *format, ...);
+int _printf(const char *format, ...);
 
 #endif /*__PRINTF_PROJECT__*/
