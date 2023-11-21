@@ -8,40 +8,42 @@
 int _ikteb_3adad(va_list argument)
 {
 
-	long int _3adad;
-	int n, i9leb, base;
+	int el3adad = va_arg(argument, int);
+	int num; 
+    int ra9m_ela7ad = el3adad % 10;
+    int digit;
+	int  i = 1;
+	int checker = 1;
 
-	n = 0;
-	_3adad = va_arg(argument, int);
+	el3adad = el3adad / 10;
+	num = el3adad;
 
-	if (_3adad < 0)
+	if (ra9m_ela7ad < 0)
 	{
-		_3adad *= -1;
-		_putchar(45);
-		n++;
+		_putchar('-');
+		el3adad = -el3adad;
+		ra9m_ela7ad = -ra9m_ela7ad;
+        num = -num;
+		i++;
 	}
-	if (_3adad >= 0 && _3adad <= 9)
+	if (num > 0)
 	{
-		_putchar(_3adad + 48);
-		n++;
-	}
-	if (_3adad > 9)
-	{
-		base = 10;
-
-		while (_3adad / base > 9)
+		while (num / 10 != 0)
 		{
-			_3adad *= 10;
+			checker = checker * 10;
+			num = num / 10;
 		}
-
-		while (_3adad > 0)
+		num = el3adad;
+		while (checker > 0)
 		{
-			i9leb = _3adad / base;
-			_3adad = _3adad % base;
-			_putchar(i9leb + 48);
-			_3adad = _3adad / 10;
-			n++;
+			digit = num / checker;
+			_putchar(digit + '0');
+			num = num - (digit * checker);
+			checker = checker / 10;
+			i++;
 		}
 	}
-	return (n);
+	_putchar(ra9m_ela7ad + '0');
+
+	return (i);
 }
