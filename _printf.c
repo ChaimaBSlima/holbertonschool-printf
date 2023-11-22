@@ -1,9 +1,9 @@
 #include "main.h"
 /**
- * _printf - printf function.
- * @format: variable
+ * _printf - the main function.
+ * @format: number of arguments
  *
- * Return: nbytes printed.
+ * Return: numbers of bytes printed.
  */
 int _printf(const char *format, ...)
 {
