@@ -49,7 +49,7 @@ int _printf(const char *format, ...)
 }
 
 /**
- * i5dem_yr7am_weldik - choce the right function
+ * i5dem_yr7am_weldik - chose the right function
  * @c: character.
  *
  * Return: 0.
