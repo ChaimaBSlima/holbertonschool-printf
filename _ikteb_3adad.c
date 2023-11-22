@@ -9,10 +9,10 @@ int _ikteb_3adad(va_list argument)
 {
 
 	int el3adad = va_arg(argument, int);
-	int num; 
-    int ra9m_ela7ad = el3adad % 10;
-    int digit;
-	int  i = 1;
+	int num;
+	int ra9m_ela7ad = el3adad % 10;
+	int digit;
+	int i = 1;
 	int checker = 1;
 
 	el3adad = el3adad / 10;
@@ -23,7 +23,7 @@ int _ikteb_3adad(va_list argument)
 		_putchar('-');
 		el3adad = -el3adad;
 		ra9m_ela7ad = -ra9m_ela7ad;
-        num = -num;
+		num = -num;
 		i++;
 	}
 	if (num > 0)
