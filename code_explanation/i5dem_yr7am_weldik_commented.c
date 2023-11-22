@@ -30,6 +30,6 @@ int (*i5dem_yr7am_weldik(const char c))(va_list)
 			return (printf[k].func);
 		}
 	}
-   /* if the specifer dosen't exist return 0 byte*/
+   /* if the specifer dosen't exist return 0 byte*/ 
 	return (0);
 }
