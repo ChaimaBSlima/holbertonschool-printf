@@ -18,7 +18,7 @@ int _7awel_binary(va_list argument)
 	}
 	for (i = i - 1; i >= 0; i--)
 	{
-		putchar((a[i] + 48));
+		_putchar((a[i] + 48));
 
 		bytes += 1;
 	}
