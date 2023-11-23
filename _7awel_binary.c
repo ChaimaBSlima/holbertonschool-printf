@@ -19,10 +19,8 @@ int _7awel_binary(va_list argument)
 	for (i = i - 1; i >= 0; i--)
 	{
 		putchar((a[i] + 48));
-		if (a[i] == 1)
-		{
-			bytes += 1;
-		}
+
+		bytes += 1;
 	}
 	return (bytes);
 }
