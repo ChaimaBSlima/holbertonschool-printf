@@ -1,66 +1,87 @@
-.TH PRINTF 1 _printf\-0.1
-.SH NAME 
-_printf \- The functions in the printf() family produce output according to a format as described below
+.TH _printf 1 "November 2023" "1.0" "_printf Manual"
+.SH NAME
+_printf \- The functions in the printf() family produce output according to a format as described below.
+
+.SH SYNOPSIS
+.B -printf
+FORMAT... [\fIARGUMENT\fR]...
+.br
+.B -printf ...OPTIONS... 
+
 .SH DESCRIPTION
-.B _printf
-Format of the format string
-       The format string is a character string, beginning and ending in
-       its initial shift state, if any.  The format string is composed
-       of zero or more directives: ordinary characters (not %), which
-       are copied unchanged to the output stream; and conversion
-       specifications, each of which results in fetching zero or more
-       subsequent arguments.  Each conversion specification is
-       introduced by the character %, and ends with a conversion
-       specifier.  In between there may be (in this order) zero or more
-       flags, an optional minimum field width, an optional precision and
-       an optional length modifier.
+Print ARGUMENT(s) according to FORMAT, or execute according to OPTIONS and returnung the numbers of bytes printed .
 
-       The overall syntax of a conversion specification is:
-
-           %[$][flags][width][.precision][length modifier]conversion
-
-       The arguments must correspond properly (after type promotion)
-       with the conversion specifier.  By default, the arguments are
-       used in the order given, where each '*' (see Field width and
-       Precision below) and each conversion specifier asks for the next
-       argument (and it is an error if insufficiently many arguments are
-       given).  One can also specify explicitly which argument is taken,
-       at each place where an argument is required, by writing "%m$"
-       instead of '%' and "*m$" instead of '*', where the decimal
-       integer m denotes the position in the argument list of the
-       desired argument, indexed starting from 1.  Thus,
 
 .SH OPTIONS
+.TP
+\fB-c,
+.br
+print a character and returning one byte.
 
 .TP
-.B  /-c 
-If no l modifier is present, the int argument is converted to an unsigned char, and the resulting character is written.  
-If an l modifier is present, the wint_t (wide
-character) argument is converted to a multibyte sequence by a call to the wcrtomb(3) function, with a conversion
-state starting in the initial state, and the resulting multibyte string is written.
+\fB-\%, 
+.br
+print a \% and returning one byte.
 
 .TP
-.B  /-s 
-.IR If no l modifier is present: the const char * argument is
-expected to be a pointer to an array of character type
-(pointer to a string).  Characters from the array are
-written up to (but not including) a terminating null byte
-('\0'); if a precision is specified, no more than the
-number specified are written.  If a precision is given, no
-null byte need be present; if the precision is not
-specified, or is greater than the size of the array, the
-array must contain a terminating null byte.
+\fB-s, 
+.br
+print a string and returning the length of the string as bytes  ( 1 character = 1 bytes ).
 
 .TP
-.B  /-d, i  
-.IR The int argument is converted to signed decimal notation.
-              The precision, if any, gives the minimum number of digits
-              that must appear; if the converted value requires fewer
-              digits, it is padded on the left with zeros.  The default
-              precision is 1.  When 0 is printed with an explicit
-              precision 0, the output is empty.
-.SH AUTHER
-.B Chaima Ben Slima
+\fB-d,i, 
+.br
+print an int argument which is converted to signed decimal notation. The precision, if any, gives the minimum number of digits that must appear; if the converted value requires fewer digits, it is padded on the left with zeros.  The default precision is 1.  When 0 is printed with an explicit precision 0, the output is empty. 
+
+.SH EXAMPLES
+Some examples of how to use _printf:
+.PP
+\fB_printf() 
+.br
+Returning error (-1 byte). _printf can not take NULL argument
+
+.PP
+\fB_printf("xyz") 
+.br
+printing : xyz ; Returning: 3 bytes.
+
+.PP
+\fB_printf("\%") 
+.br
+Returning error (-1 byte). the special character \% should be followed by a specifer , to print a '\%' see the next example.
+
+.PP
+\fB_printf("\%\%xyz") 
+.br
+printing : \%xyz ; Returning: 4 bytes.
+
+.PP
+\fB_printf("character=\%c", character) // character= 'A'
+.br
+printing : character=A ; Returning: 11 bytes. (bytes of the string before the specifer + bytes of the variable 'character')
+
+\fB_printf("string=\%c", string) // string= 'xyz'
+.br
+printing : string=xyz ; Returning: 10 bytes. (bytes of the string before the specifer + bytes of the variable 'string')
+
+\fB_printf("\%d", 1024)
+.br
+printing : 1024 ; Returning: 4 bytes. ( bytes of the int data )
+
+\fB_printf("\%i - \%i = \%i\n", 1024, 2048, -1024)
+.br
+printing : 1024 - 2048 = -1024 ; Returning: 22 bytes. ( bytes of the int data + byte of the characters in the first argument)
+
+\fB_printf("%i", INT_MIN)
+.br
+printing : -2147483648 ; Returning: 4 bytes. ( bytes of the int data)
+
+
+.SH AUTHOR
+Chaima Ben Slima <chaimabslima@outlook.fr>
+
+.SH BUGS
+Report bugs to <7689@holbertonstudents.com>
+
 .SH COPYRIGHT
-.B GUN copyright.
-
+Copyright (C) 2023 Chaima
