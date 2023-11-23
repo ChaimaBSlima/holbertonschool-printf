@@ -9,7 +9,7 @@ int _7awel_binary(va_list argument)
 {
 
 	int bytes = 0;
-	 int a[32], n, i;
+	 int a[100], n, i;
 	n = va_arg(argument, unsigned int);
 	for (i = 0; n > 0; i++)
 	{
