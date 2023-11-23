@@ -61,6 +61,7 @@ int (*i5dem_yr7am_weldik(const char c))(va_list)
 		{'s', _ikteb_jomla},
 		{'d', _ikteb_3adad},
 		{'i', _ikteb_3adad},
+		{'b', _7awel_binary},
 		{'\0', NULL}
 	};
 

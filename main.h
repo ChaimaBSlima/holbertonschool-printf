@@ -18,11 +18,18 @@ typedef struct types
 	int (*func)(va_list);
 } print_f;
 
+/* putchar function */
 int _putchar(char c);
-int _printf(const char *format, ...);
+
+/* Function to operate*/
 int _ikteb_3adad(va_list argument);
 int _ikteb_jomla(va_list argument);
 int _ikteb_7arf(va_list argument);
+int _7awel_binary(va_list argument);
+
+/* _printf main function*/
+int _printf(const char *format, ...);
+/* The function that select the right function to operate*/
 int (*i5dem_yr7am_weldik(const char c))(va_list);
 
 
