@@ -8,7 +8,7 @@
 int _printf(const char *format, ...)
 {
 	va_list list;
-	unsigned int i = 0, bytes= 0;
+	unsigned int i = 0, bytes = 0;
 
 	if (!format)
 		return (-1);
@@ -62,8 +62,7 @@ int (*i5dem_yr7am_weldik(const char c))(va_list)
 		{'d', _ikteb_3adad},
 		{'i', _ikteb_3adad},
 		{'b', _7awel_binary},
-		{'\0', NULL}
-	};
+		{'\0', NULL}};
 
 	int k;
 

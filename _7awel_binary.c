@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * _ikteb_3adad - Print number
+ * _7awel_binary - convert the numbers to binary
  * @argument: the number
  *
  * Return: n (bytes)
@@ -9,7 +9,8 @@ int _7awel_binary(va_list argument)
 {
 
 	int bytes = 0;
-	 int a[100], n, i;
+	int a[32], n, i;
+
 	n = va_arg(argument, unsigned int);
 	for (i = 0; n > 0; i++)
 	{
