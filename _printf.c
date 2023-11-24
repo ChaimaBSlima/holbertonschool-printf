@@ -8,7 +8,7 @@
 int _printf(const char *format, ...)
 {
 	va_list list;
-	unsigned int i = 0, j = 0;
+	unsigned int i = 0, bytes= 0;
 
 	if (!format)
 		return (-1);
@@ -24,28 +24,28 @@ int _printf(const char *format, ...)
 			else if (format[i + 1] == '%')
 			{
 				_putchar('%');
-				j++;
+				bytes++;
 				i++;
 			}
 			else if (i5dem_yr7am_weldik(format[i + 1]) != NULL)
 			{
-				j += (i5dem_yr7am_weldik(format[i + 1]))(list);
+				bytes += (i5dem_yr7am_weldik(format[i + 1]))(list);
 				i++;
 			}
 			else
 			{
 				_putchar(format[i]);
-				j++;
+				bytes++;
 			}
 		}
 		else
 		{
 			_putchar(format[i]);
-			j++;
+			bytes++;
 		}
 	}
 	va_end(list);
-	return (j);
+	return (bytes);
 }
 
 /**

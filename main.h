@@ -21,7 +21,7 @@ typedef struct types
 /* putchar function */
 int _putchar(char c);
 
-/* Function to operate*/
+/* Functions to operate */
 int _ikteb_3adad(va_list argument);
 int _ikteb_jomla(va_list argument);
 int _ikteb_7arf(va_list argument);
