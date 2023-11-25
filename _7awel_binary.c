@@ -7,8 +7,33 @@
  */
 int _7awel_binary(va_list argument)
 {
-
+	int i;
+	int *array;
 	int bytes = 0;
+	unsigned int el3adad = va_arg(argument, unsigned int);
+	unsigned int num = el3adad;
+
+	while (el3adad /2 != 0)
+	{
+		el3adad /= 2;
+		bytes++;
+	}
+	bytes++;
+	array = malloc(bytes * sizeof(int));
+
+	for (i = 0; i < bytes; i++)
+	{
+		array[i] = num % 2;
+		num /= 2;
+	}
+	for (i = bytes - 1; i >= 0; i--)
+	{
+		_putchar(array[i] + '0');
+	}
+	free(array);
+	return (bytes);
+
+	/*int bytes = 0;
 	int a[32], n, i;
 
 	n = va_arg(argument, unsigned int);
@@ -23,5 +48,5 @@ int _7awel_binary(va_list argument)
 
 		bytes += 1;
 	}
-	return (bytes);
+	return (bytes);*/
 }
