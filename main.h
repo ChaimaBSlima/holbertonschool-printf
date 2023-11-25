@@ -29,6 +29,7 @@ int _7awel_binary(va_list argument);
 int _ikteb_3adad_unsigned(va_list argument);
 int _7awel_hex(va_list argument);
 int _7awel_HEX(va_list argument);
+int _7awel_oct(va_list argument);
 
 /* _printf main function*/
 int _printf(const char *format, ...);
