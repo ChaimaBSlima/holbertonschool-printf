@@ -60,7 +60,7 @@ int (*i5dem_yr7am_weldik(const char c))(va_list)
 		{'c', _ikteb_7arf}, {'s', _ikteb_jomla},
 		{'d', _ikteb_3adad}, {'i', _ikteb_3adad}, {'b', _7awel_binary},
 		{'u', _ikteb_3adad_unsigned}, {'x', _7awel_hex},
-		{'X', _7awel_HEX},{'X', _7awel_oct}, {'\0', NULL}};
+		{'X', _7awel_HEX},{'o', _7awel_oct}, {'\0', NULL}};
 
 	int k;
 
