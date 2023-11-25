@@ -15,10 +15,9 @@ int _7awel_binary(va_list argument)
 
 	while (el3adad / 2 != 0)
 	{
-		el3adad /= 2;
 		bytes++;
+		el3adad /= 2;
 	}
-	bytes++;
 	array = malloc(bytes * sizeof(int));
 	for (i = 0; i < bytes; i++)
 	{
