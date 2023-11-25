@@ -8,6 +8,7 @@
 int _7awel_hex(va_list argument)
 {
 	int i;
+	int *array;
 	int bytes = 0;
 	unsigned int el3adad = va_arg(argument, unsigned int);
 	unsigned int num = el3adad;
@@ -18,7 +19,7 @@ int _7awel_hex(va_list argument)
 		bytes++;
 	}
 	bytes++;
-	int array[bytes];
+	array = malloc(bytes * sizeof(int));
 
 	for (i = 0; i < bytes; i++)
 	{
@@ -31,5 +32,6 @@ int _7awel_hex(va_list argument)
 			array[i] = array[i] + 39;
 		_putchar(array[i] + '0');
 	}
+	free(array);
 	return (bytes);
 }
