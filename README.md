@@ -4,11 +4,15 @@ In order to create this function I created many files, each file have its own op
 | Files |  Description                |
 | :-------- |  :------------------------- |
 | `main.h` | it's a header file that contain the prototypes of all the functions and the prototype of the function _putchar.|
-| `_putchar.c`| contain the function function _putchar that a print a single character . |
-|  `_printf.c` |contain the function _printf and the function i5dem_yr7am_weldik that generate the right operation |
-| `_ikteb_7arf` | contain a function that prints a single character |
-| `_ikteb_jomla` | contain a function that prints a string |
-| `_ikteb_3adad` | contain a function that prints a decimal number |
+| `_putchar.c`| contain the function function _putchar that a print a single character. |
+|  `_printf.c` |contain the function _printf and the function i5dem_yr7am_weldik that generate the right operation. |
+| `_ikteb_7arf.c` | contain a function that prints a single character. |
+| `_ikteb_jomla.c` | contain a function that prints a string. |
+| `_ikteb_3adad.c` | contain a function that prints a decimal number. |
+| `_7awel_binary.c` | contain a function that convert a decimal number to binary namber. |
+| `_7awel_oct.c` | contain a function that convert a decimal number to octal namber. |
+| `_7awel_HEX.c` | contain a function that convert a decimal number to hexgecimal namber unsing uppercase letters. |
+| `_7awel_hex.c` | contain a function that convert a decimal number to hexgecimal namber unsing lowercase letters. |
 ##  _printf Function
 Following this Flowshart can help you understand more the main function `_printf`.
 
