@@ -63,7 +63,7 @@ Following this Flowshart can help you understand more the function `_7awel_HEX`.
 
 ![_7awel_HEXA_flowshart](https://github.com/ChaimaBSlima/holbertonschool-printf/assets/146720036/65e1c343-df57-4d86-bebe-9a42ddf17689)
 
-##  _7awel_hew Function
+##  _7awel_hex Function
 Following this Flowshart can help you understand more the function `_7awel_hex`.
 
 
