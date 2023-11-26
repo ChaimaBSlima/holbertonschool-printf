@@ -9,6 +9,7 @@ In order to create this function I created many files, each file have its own op
 | `_ikteb_7arf.c` | contain a function that prints a single character. |
 | `_ikteb_jomla.c` | contain a function that prints a string. |
 | `_ikteb_3adad.c` | contain a function that prints a decimal number. |
+| `_ikteb_3adad_unsigned.c` | contain a function that prints an unsigned decimal number. |
 | `_7awel_binary.c` | contain a function that convert a decimal number to binary namber. |
 | `_7awel_oct.c` | contain a function that convert a decimal number to octal namber. |
 | `_7awel_HEX.c` | contain a function that convert a decimal number to hexgecimal namber unsing uppercase letters. |
@@ -41,6 +42,12 @@ Following this Flowshart can help you understand more the function `_ikteb_jomla
 
 ##  _ikteb_3adad Function
 Following this Flowshart can help you understand more the function `_ikteb_3adad`.
+
+
+![_ikteb_3adad_flowshart](https://github.com/ChaimaBSlima/holbertonschool-low_level_programming/assets/146720036/be7dd307-d2a0-4fcf-b83b-f31017e0081c)
+
+##  _ikteb_3adad_unsigned Function
+Following this Flowshart can help you understand more the function `_ikteb_3adad_unsigned`.
 
 
 ![_ikteb_3adad_flowshart](https://github.com/ChaimaBSlima/holbertonschool-low_level_programming/assets/146720036/be7dd307-d2a0-4fcf-b83b-f31017e0081c)
